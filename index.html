@@ -516,9 +516,10 @@
 
         .fit-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 2rem;
-            margin-top: 3.5rem;
+            margin: 3.5rem auto 0;
+            max-width: 640px;
         }
 
         .fit-col {
@@ -555,9 +556,9 @@
         }
 
         .fit-yes .fit-mark {
-            background: rgba(99, 102, 241, 0.18);
-            color: #a5b4fc;
-            border: 1px solid rgba(99, 102, 241, 0.35);
+            background: rgba(110, 231, 183, 0.15);
+            color: #6ee7b7;
+            border: 1px solid rgba(110, 231, 183, 0.35);
         }
 
         .fit-no .fit-mark {
@@ -603,7 +604,16 @@
         }
 
         .fit-yes .fit-list li::before {
-            background: #6366f1;
+            content: '✓';
+            background: transparent;
+            color: #6ee7b7;
+            width: auto;
+            height: auto;
+            border-radius: 0;
+            margin-top: 0;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.55;
         }
 
         .fit-no .fit-list li {
@@ -1136,7 +1146,7 @@
                 <div class="step">
                     <div class="step-number">4</div>
                     <h3>You own it</h3>
-                    <p>When the build is done, everything is yours — the code, the system, the credentials. No license fees, no lock-in, no contract you have to keep paying. Maintain it yourself, hand it to a developer, or keep me on. Your call.</p>
+                    <p>When the build is done, everything is yours — code, system, credentials. No license fees, no lock-in.</p>
                 </div>
             </div>
         </div>
@@ -1146,7 +1156,7 @@
     <section class="fit-check" id="fit">
         <div class="section-inner">
             <p class="section-label">Fit Check</p>
-            <h2 class="section-title">Built for creator-businesses. Not for everyone.</h2>
+            <h2 class="section-title">Built for creator-businesses.</h2>
 
             <div class="fit-grid">
                 <div class="fit-col fit-yes">
@@ -1155,24 +1165,11 @@
                         <span>For you if</span>
                     </div>
                     <ul class="fit-list">
-                        <li>You run a creator-business, indie SaaS, course, agency-of-one, or one-person shop</li>
+                        <li>You run a creator-business, indie SaaS, course, agency-of-one, or solo shop</li>
                         <li>You're an independent operator doing everything yourself</li>
-                        <li>You're running your business alone and manual work is eating your week</li>
+                        <li>You want to stop doing repetitive work manually</li>
                         <li>You want a custom system, not another SaaS subscription</li>
                         <li>You want to own what gets built</li>
-                    </ul>
-                </div>
-
-                <div class="fit-col fit-no">
-                    <div class="fit-col-header">
-                        <span class="fit-mark">✕</span>
-                        <span>Not for you if</span>
-                    </div>
-                    <ul class="fit-list">
-                        <li>You're an enterprise team or 10+ employee agency</li>
-                        <li>You need a managed AI department</li>
-                        <li>You want generic AI strategy consulting with no actual building</li>
-                        <li>You need regulated medical/legal workflows or enterprise procurement processes</li>
                     </ul>
                 </div>
             </div>
