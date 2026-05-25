@@ -363,7 +363,7 @@
 
         .live-work-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             margin-top: 3.5rem;
         }
@@ -456,9 +456,10 @@
             color: #6b7280;
             font-size: 0.72rem;
             font-style: italic;
-            margin-bottom: 0.7rem;
+            margin-top: 0.9rem;
             line-height: 1.4;
             letter-spacing: 0.2px;
+            flex: 0 0 auto;
         }
 
         /* ── HOW IT WORKS ── */
@@ -1101,9 +1102,9 @@
                         <span class="placeholder-label">Bill Calendar AI</span>
                     </div>
                     <div class="live-tile-body">
-                        <p class="tile-note">Sample recreation with dummy data — actual system runs privately on real accounts.</p>
                         <h3>Bill Calendar AI</h3>
-                        <p>A monthly bill-tracking system that ingests balances and statements, checks paid bills, and projects totals months ahead.</p>
+                        <p>A monthly bill-tracking system that ingests balances and statements, checks off paid bills, and projects monthly totals out months in advance.</p>
+                        <p class="tile-note">Sample recreation with dummy data — actual system runs privately on real accounts.</p>
                     </div>
                 </div>
             </div>
