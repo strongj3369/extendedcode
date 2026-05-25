@@ -363,8 +363,8 @@
 
         .live-work-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
+            grid-template-columns: 1fr;
+            gap: 4rem;
             margin-top: 3.5rem;
         }
 
@@ -386,20 +386,21 @@
 
         .live-tile-image {
             width: 100%;
-            aspect-ratio: 16 / 10;
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.10), rgba(168, 85, 247, 0.08));
             position: relative;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+            min-height: 80px;
         }
 
         .live-tile-image img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            max-width: 100%;
             display: block;
+            object-fit: contain;
         }
 
         .live-tile-image .placeholder-label {
