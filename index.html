@@ -140,6 +140,80 @@
             transform: translateY(-1px);
         }
 
+        .nav-toggle {
+            display: none;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            padding: 0;
+            width: 40px;
+            height: 38px;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .nav-toggle:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: #e0e0e0;
+            border-radius: 1px;
+            transition: transform 0.25s, opacity 0.2s;
+        }
+
+        .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.96);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 1rem 1rem 1.2rem;
+        }
+
+        .nav-menu.open {
+            display: block;
+        }
+
+        .nav-menu .nav-menu-link {
+            display: block;
+            background: #6366f1;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            padding: 0.85rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+
+        .nav-menu .nav-menu-link:hover {
+            background: #4f46e5;
+        }
+
         /* ── HERO ── */
         .hero {
             min-height: 100vh;
@@ -947,8 +1021,11 @@
             }
 
             .nav-cta {
-                padding: 0.5rem 1rem;
-                font-size: 0.8rem;
+                display: none;
+            }
+
+            .nav-toggle {
+                display: flex;
             }
 
             .hero {
@@ -1020,7 +1097,35 @@
     <nav>
         <a href="#" class="nav-logo">extended<span>code</span></a>
         <a href="#contact" class="nav-cta">Book a Strategy Call</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-menu" id="navMenu">
+            <a href="#contact" class="nav-menu-link">Book a Strategy Call</a>
+        </div>
     </nav>
+
+    <script>
+    (function() {
+        var toggle = document.querySelector('.nav-toggle');
+        var menu = document.getElementById('navMenu');
+        if (!toggle || !menu) return;
+
+        toggle.addEventListener('click', function() {
+            var isOpen = menu.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        menu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                menu.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+    </script>
 
     <!-- HERO -->
     <section class="hero">
