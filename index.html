@@ -131,6 +131,7 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9rem;
+            white-space: nowrap;
             transition: background 0.3s, transform 0.2s;
         }
 
@@ -398,7 +399,7 @@
         .live-tile-image img {
             width: auto;
             height: auto;
-            max-width: 720px;
+            max-width: min(720px, 100%);
             display: block;
             margin: 0 auto;
         }
@@ -938,7 +939,16 @@
         /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
             nav {
-                padding: 1rem 1.2rem;
+                padding: 0.85rem 1rem;
+            }
+
+            .nav-logo {
+                font-size: 1.15rem;
+            }
+
+            .nav-cta {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
             }
 
             .hero {
