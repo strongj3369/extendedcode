@@ -403,6 +403,12 @@
             object-fit: contain;
         }
 
+        .live-tile-image.is-native-size img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+        }
+
         .live-tile-image .placeholder-label {
             position: absolute;
             color: rgba(165, 180, 252, 0.55);
@@ -1074,7 +1080,7 @@
 
             <div class="live-work-grid">
                 <div class="live-tile">
-                    <div class="live-tile-image">
+                    <div class="live-tile-image is-native-size">
                         <img src="images/candace-uncut.png" alt="Candace Uncut content pipeline screenshot" onerror="this.style.display='none'">
                         <span class="placeholder-label">Candace Uncut Pipeline</span>
                     </div>
