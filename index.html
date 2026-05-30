@@ -430,114 +430,6 @@
             line-height: 1.6;
         }
 
-        /* ── LIVE WORK ── */
-        .live-work {
-            background: #111114;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .live-work-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 4rem;
-            margin-top: 3.5rem;
-        }
-
-        .live-tile {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .live-tile:hover {
-            border-color: rgba(99, 102, 241, 0.3);
-            transform: translateY(-4px);
-            background: rgba(99, 102, 241, 0.04);
-        }
-
-        .live-tile-image {
-            width: 100%;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.10), rgba(168, 85, 247, 0.08));
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 80px;
-        }
-
-        .live-tile-image img {
-            width: auto;
-            height: auto;
-            max-width: min(720px, 100%);
-            display: block;
-            margin: 0 auto;
-        }
-
-        .live-tile-image .placeholder-label {
-            position: absolute;
-            color: rgba(165, 180, 252, 0.55);
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            text-align: center;
-            padding: 0 1rem;
-        }
-
-        .live-tile-image img:not([src=""]) + .placeholder-label {
-            display: none;
-        }
-
-        .live-tile-body {
-            padding: 1.5rem 1.6rem 1.7rem;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .live-tile-body h3 {
-            color: #fff;
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .live-tile-body p {
-            color: #9ca3af;
-            font-size: 0.93rem;
-            line-height: 1.6;
-            flex: 1;
-        }
-
-        .live-tile-body a {
-            color: #a5b4fc;
-            text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 600;
-            margin-top: 0.9rem;
-            display: inline-block;
-            transition: color 0.2s;
-        }
-
-        .live-tile-body a:hover {
-            color: #c7d2fe;
-        }
-
-        .tile-note {
-            color: #6b7280;
-            font-size: 0.72rem;
-            font-style: italic;
-            margin-top: 0.9rem;
-            line-height: 1.4;
-            letter-spacing: 0.2px;
-            flex: 0 0 auto;
-        }
-
         /* ── HOW IT WORKS ── */
         .how-it-works {
             background: #111113;
@@ -1042,8 +934,7 @@
             }
 
             .services-grid,
-            .steps,
-            .live-work-grid {
+            .steps {
                 grid-template-columns: 1fr;
             }
 
@@ -1180,62 +1071,6 @@
         </div>
     </section>
 
-    <!-- LIVE WORK -->
-    <section class="live-work" id="live-work">
-        <div class="section-inner">
-            <p class="section-label">Live Work</p>
-            <h2 class="section-title">Here's what these systems actually look like.</h2>
-            <p class="section-subtitle">Four real builds across the three categories above — running in production right now.</p>
-
-            <div class="live-work-grid">
-                <div class="live-tile">
-                    <div class="live-tile-image">
-                        <img src="images/candace-uncut.png" alt="Candace Uncut content pipeline screenshot" onerror="this.style.display='none'">
-                        <span class="placeholder-label">Candace Uncut Pipeline</span>
-                    </div>
-                    <div class="live-tile-body">
-                        <h3>Candace Uncut Pipeline</h3>
-                        <p>A full content automation pipeline: YouTube → transcription → AI clip selection → caption burn-in → ready-to-upload shorts.</p>
-                    </div>
-                </div>
-
-                <div class="live-tile">
-                    <div class="live-tile-image">
-                        <img src="images/bill-calendar-ai.png" alt="Bill Calendar AI screenshot" onerror="this.style.display='none'">
-                        <span class="placeholder-label">Bill Calendar AI</span>
-                    </div>
-                    <div class="live-tile-body">
-                        <h3>Bill Calendar AI</h3>
-                        <p>A monthly bill-tracking system that ingests balances and statements, checks off paid bills, and projects monthly totals out months in advance.</p>
-                        <p class="tile-note">Sample recreation with dummy data — actual system runs privately on real accounts.</p>
-                    </div>
-                </div>
-
-                <div class="live-tile">
-                    <div class="live-tile-image">
-                        <img src="images/agent-inventory.png" alt="Agent Inventory dashboard screenshot" onerror="this.style.display='none'">
-                        <span class="placeholder-label">Agent Inventory</span>
-                    </div>
-                    <div class="live-tile-body">
-                        <h3>Agent Inventory</h3>
-                        <p>A dashboard for tracking AI projects across status, stack, and deployment. Built for myself; works for any project portfolio.</p>
-                    </div>
-                </div>
-
-                <div class="live-tile">
-                    <div class="live-tile-image">
-                        <img src="images/strong-automation-dashboard.png" alt="Strong Automation Dashboard screenshot" onerror="this.style.display='none'">
-                        <span class="placeholder-label">Strong Automation Dashboard</span>
-                    </div>
-                    <div class="live-tile-body">
-                        <h3>Strong Automation Dashboard</h3>
-                        <p>A unified control surface for monitoring multiple automation pipelines — content, analytics, marketing, ops — all in one view.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- PROCESS -->
     <section class="how-it-works" id="process">
         <div class="section-inner">
@@ -1340,7 +1175,7 @@
 
                 const flow = [
                     { bot: "Hey — I'm Jennifer. I'll ask a few quick questions so I can figure out if I can actually help you. Takes about a minute.", next: 'auto' },
-                    { bot: "First — what kind of business are you running?", field: 'business_type', options: ['Creator / content business', 'Indie SaaS / product', 'Course / coaching', 'Agency-of-one', 'Other one-person business'] },
+                    { bot: "First — what kind of business are you running?", field: 'business_type', options: ['Creator / content business', 'Indie SaaS / product', 'Agency-of-one', 'Other one-person business'] },
                     { bot: "Got it. In one or two sentences, what's the tedious work in your week?", field: 'bottleneck', placeholder: 'e.g. sorting inbound leads, repurposing video, tracking bills...' },
                     { bot: "Which of these is closest to what you'd want built?", field: 'build_type', options: ['Watch-and-act agent', 'Input-to-output pipeline', 'Custom dashboard', 'Not sure yet'] },
                     { bot: "What tools are already in your stack? (Doesn't have to be exhaustive — just the ones this would touch.)", field: 'tools', placeholder: 'e.g. Notion, Stripe, Gmail, YouTube, Airtable...' },
